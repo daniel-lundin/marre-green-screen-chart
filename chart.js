@@ -33,6 +33,7 @@
     chart.style.visibility = 'visible';
     var svgLine = document.querySelector('.line');
     var cashLabel = document.getElementById('label');
+    var durationInput = document.getElementById('duration');
     var totalLength = svgLine.getTotalLength();
     var tweenData = { dashOffset: totalLength, dataIndex: 0 };
 
@@ -48,7 +49,7 @@
         cashLabel.innerHTML = Math.round(interpolated) + ' kr';
 
       },
-      time: 10,
+      time: parseInt(durationInput.value, 10),
       transition: 'linear'
     });
   });

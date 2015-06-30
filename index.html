@@ -36,6 +36,40 @@
       left: 0;
       visibility: hidden;
     }
+
+    .controls {
+      text-align: center;
+      padding: 30px;
+    }
+
+    .controls label {
+      display: block;
+      font-family: Arial, sans-serif;
+      font-size: 20px;
+      clear: right;
+      width: 200px;
+      margin: 0 auto;
+    }
+
+    .controls input {
+      padding: 8px;
+      font-size: 20px;
+      font-family: Arial, sans-serif;
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      display: block;
+      margin: 0 auto;
+      width: 200px;
+    }
+
+    .controls button {
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      padding: 5px;
+      font-size: 20px;
+      margin-top: 10px;
+      background: #008000;
+      color: #eee;
+      width: 200px;
+    }
   </style>
 </head>
 <body>
@@ -43,7 +77,11 @@
     <div id="label"></div>
   </div>
 
-  <button id="start-button">Start</button>
+  <div class="controls">
+    <label for="duration">Duration (in seconds):</label>
+    <input type="number" id="duration" value="10">
+    <button id="start-button">Start</button>
+  </div>
   <script src="d3.js"></script>
   <script src="t.js"></script>
   <script src="chart.js"></script>
